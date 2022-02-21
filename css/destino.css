@@ -1,0 +1,424 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Bebas Neue", "cursive";
+  list-style-type: none;
+  text-decoration: none;
+}
+
+@media (max-width: 640px) {
+  body header {
+    padding-top: 2.5vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  body header #logo {
+    width: 134px;
+    height: 34px;
+    grid-area: logo;
+  }
+  body header #logo img {
+    width: 100%;
+    height: 100%;
+  }
+  body header #barraBusqueda {
+    margin: 2vh;
+    grid-area: search;
+  }
+  body header #ofertasTitulo {
+    grid-area: ofertas;
+  }
+  body header #navegadorCompras {
+    grid-area: compras;
+  }
+  body header #navegadorCompras .listaMarket {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2vh;
+  }
+  body header #navegadorCompras .listaMarket li {
+    margin-bottom: 2vh;
+  }
+  body header #navegadorUsuario {
+    grid-area: usuario;
+  }
+  body header #navegadorUsuario .navUsu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 2vh;
+  }
+  body header #navegadorUsuario .navUsu li {
+    margin-bottom: 2vh;
+    text-align: center;
+  }
+  body main #slider {
+    width: 100%;
+    margin-bottom: 5vh;
+  }
+  body main #galeria {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  body main #galeria div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10vh;
+    width: 384px;
+  }
+  body main #galeria div img {
+    width: 384px;
+    height: 240px;
+  }
+  body main #galeria div h3 {
+    margin-top: 0.7vh;
+  }
+  body footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2vw;
+  }
+  body footer ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3vh;
+  }
+}
+@media (min-width: 641px) and (max-width: 1200px) {
+  body header {
+    display: grid;
+    align-items: center;
+    grid-template-areas: "logo search ofertas" "compras usuario usuario";
+    padding: 1vw;
+  }
+  body header #logo {
+    width: 134px;
+    height: 34px;
+    grid-area: logo;
+  }
+  body header #logo img {
+    width: 100%;
+    height: 100%;
+  }
+  body header #barraBusqueda {
+    margin: 2vh;
+    grid-area: search;
+  }
+  body header #ofertasTitulo {
+    grid-area: ofertas;
+  }
+  body header #navegadorCompras {
+    grid-area: compras;
+  }
+  body header #navegadorCompras .listaMarket {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2vh;
+    margin-top: 2vh;
+  }
+  body header #navegadorUsuario {
+    grid-area: usuario;
+  }
+  body header #navegadorUsuario .navUsu {
+    display: flex;
+    flex-direction: column;
+    row-gap: 4vh;
+    margin-top: 2vh;
+  }
+  body header #navegadorUsuario .navUsu li {
+    margin: 1vh;
+    text-align: center;
+  }
+  body main #slider {
+    width: 100vw;
+    margin-bottom: 5vh;
+  }
+  body main #galeria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
+    row-gap: 5vh;
+    column-gap: 5vw;
+  }
+  body main #galeria div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10vh;
+  }
+  body main #galeria div img {
+    width: 192px;
+    height: 120px;
+  }
+  body footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2vw;
+  }
+  body footer ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3vh;
+  }
+}
+@media (min-width: 1201px) {
+  body header {
+    display: grid;
+    align-items: center;
+    grid-template-areas: "logo search ofertas" "compras usuario usuario";
+    padding: 1vw;
+  }
+  body header #logo {
+    width: 134px;
+    height: 34px;
+    grid-area: logo;
+  }
+  body header #logo img {
+    width: 100%;
+    height: 100%;
+  }
+  body header #barraBusqueda {
+    grid-area: search;
+  }
+  body header #ofertasTitulo {
+    grid-area: ofertas;
+  }
+  body header #navegadorCompras {
+    grid-area: compras;
+  }
+  body header #navegadorCompras .listaMarket {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 2vh;
+  }
+  body header #navegadorUsuario {
+    grid-area: usuario;
+  }
+  body header #navegadorUsuario .navUsu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 2vh;
+    justify-content: flex-end;
+  }
+  body header #navegadorUsuario .navUsu li {
+    margin-right: 5vw;
+  }
+  body main {
+    margin-bottom: 10vh;
+  }
+  body main #slider {
+    width: 100%;
+    margin-bottom: 10vh;
+  }
+  body main #galeria {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-left: 5vw;
+  }
+  body main #galeria div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 5vh;
+    width: 384px;
+  }
+  body main #galeria div img {
+    width: 384px;
+    height: 240px;
+  }
+  body footer {
+    display: flex;
+    flex-direction: column;
+    padding: 1vw;
+  }
+  body footer ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+@media (max-width: 640px) {
+  header {
+    background-color: #fff159;
+  }
+  header nav li {
+    font-size: 24px;
+    color: #736c28;
+    animation-name: secciones;
+    animation-duration: 2s;
+  }
+  header nav li:active {
+    color: #c1b74d;
+  }
+  @keyframes secciones {
+    from {
+      transform: translateY(-100px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0px);
+      opacity: 100;
+    }
+  }
+  header nav li a {
+    color: #736c28;
+  }
+
+  main {
+    background-color: #e7e7e7;
+  }
+  main #galeria {
+    animation-duration: 4s;
+    animation-name: galeria;
+  }
+  @keyframes galeria {
+    from {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0px);
+      opacity: 100;
+    }
+  }
+  main #galeria div {
+    background-color: #fff;
+    border-radius: 2%;
+  }
+  main #galeria div img {
+    width: 100%;
+    height: 100%;
+  }
+  main #galeria div:active {
+    transform: scale(1.05, 1.05);
+  }
+}
+@media (min-width: 641px) and (max-width: 1200px) {
+  header {
+    background-color: #fff159;
+  }
+  header nav li {
+    font-size: 24px;
+    color: #736c28;
+    animation-name: secciones;
+    animation-duration: 2s;
+  }
+  header nav li:active {
+    color: #c1b74d;
+  }
+  @keyframes secciones {
+    from {
+      transform: translateY(-100px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0px);
+      opacity: 100;
+    }
+  }
+  header nav li a {
+    color: #736c28;
+  }
+
+  main {
+    background-color: #e7e7e7;
+  }
+  main #galeria {
+    animation-duration: 4s;
+    animation-name: galeria;
+  }
+  @keyframes galeria {
+    from {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0px);
+      opacity: 100;
+    }
+  }
+  main #galeria div {
+    background-color: #fff;
+    border-radius: 2%;
+  }
+  main #galeria div img {
+    width: 100%;
+    height: 100%;
+  }
+  main #galeria div:active {
+    transform: scale(1.05, 1.05);
+  }
+}
+@media (min-width: 1201px) {
+  header {
+    background-color: #fff159;
+  }
+  header nav li {
+    font-size: 18px;
+    color: #736c28;
+    animation-name: secciones;
+    animation-duration: 2s;
+  }
+  header nav li:active {
+    color: #c1b74d;
+  }
+  @keyframes secciones {
+    from {
+      transform: translateX(-100px);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0px);
+      opacity: 100;
+    }
+  }
+  header nav li a {
+    color: #736c28;
+  }
+
+  main {
+    background-color: #e7e7e7;
+  }
+  main #galeria {
+    animation-duration: 4s;
+    animation-name: galeria;
+  }
+  @keyframes galeria {
+    from {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0px);
+      opacity: 100;
+    }
+  }
+  main #galeria div {
+    background-color: #fff;
+    border-radius: 2%;
+  }
+  main #galeria div img {
+    width: 100%;
+    height: 100%;
+  }
+  main #galeria div:active {
+    transform: scale(1.05, 1.05);
+  }
+
+  footer {
+    height: 15vh;
+  }
+}
+
+/*# sourceMappingURL=destino.css.map */

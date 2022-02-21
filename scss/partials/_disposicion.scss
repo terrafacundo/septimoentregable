@@ -1,0 +1,287 @@
+@media (max-width:640px){
+    body{
+        //HEADER DIVISION C GRID, SUBDIVISION FLEX
+            header{
+                padding-top:2.5vh;
+                display:flex;
+                flex-direction: column;
+                align-items: center;
+                #logo{
+                    width: 134px;
+                    height: 34px;
+                    grid-area:logo;
+                    img{
+                        width: 100%;
+                        height:100%;
+                    }
+                }
+                #barraBusqueda{
+                    margin: 2vh;
+                    grid-area:search;
+                }
+                #ofertasTitulo{
+        
+                    grid-area:ofertas;
+                }
+                #navegadorCompras{
+                    grid-area:compras;
+                    .listaMarket{
+                        display: flex;
+                        flex-direction:column;
+                        align-items: center;
+                        margin-top: 2vh;
+                        li{
+                            margin-bottom: 2vh;
+                        }
+                    }
+                }
+                #navegadorUsuario{
+                    grid-area:usuario;
+                    .navUsu{
+                        display: flex;
+                        flex-direction:column;
+                        justify-content:center;
+                        margin-top: 2vh;
+                        li{
+                            margin-bottom: 2vh;
+                            text-align: center;
+                        }
+                        
+                    }
+                }
+            }
+        
+            main{
+                #slider{
+                    width: 100%;
+                    margin-bottom: 5vh;
+                }
+                #galeria{
+                //Galeria y disposicion de secciones
+                display:flex;
+                flex-direction: column;
+                align-items: center;
+                    div{
+                        display: flex;
+                        flex-direction:column;
+                        align-items: center;
+                        margin-bottom:10vh;
+                        width:384px;
+                        img{
+                            width:384px;
+                            height: 240px;
+                        }
+                        h3{
+                            margin-top: 0.7vh;
+                        }
+                    }
+                }
+            }
+            footer{
+                display: flex;
+                flex-direction:column;
+                align-items: center;
+                padding: 2vw;
+                
+        
+                ul{
+                    display: flex;
+                    flex-direction:column;
+                    align-items: center;
+                    margin-bottom: 3vh;
+                
+                }
+            }
+        }
+}
+
+
+@media (min-width:641px) and (max-width:1200px){
+    body{
+        //HEADER DIVISION C GRID, SUBDIVISION FLEX
+            header{
+                display: grid;
+                align-items: center;
+                grid-template-areas: 
+                "logo search ofertas"
+                "compras usuario usuario";
+                padding: 1vw;
+                #logo{
+                    width: 134px;
+                    height: 34px;
+                    grid-area:logo;
+                    img{
+                        width: 100%;
+                        height:100%;
+                    }
+                }
+                #barraBusqueda{
+                    margin: 2vh;
+                    grid-area:search;
+                }
+                #ofertasTitulo{
+        
+                    grid-area:ofertas;
+                }
+                #navegadorCompras{
+                    grid-area:compras;
+                    .listaMarket{
+                        display:flex;
+                        flex-direction: column;
+                        row-gap: 2vh;
+                        margin-top: 2vh;
+                    }
+                }
+                #navegadorUsuario{
+                    grid-area:usuario;
+                    .navUsu{
+                        display: flex;
+                        flex-direction:column;
+                        row-gap: 4vh;
+                        margin-top: 2vh;
+                        li{
+                            margin: 1vh;
+                            text-align: center;
+                        }
+                        
+                    }
+                }
+            }
+        
+            main{
+                #slider{
+                    width: 100vw;
+                    margin-bottom: 5vh;
+                }
+                #galeria{
+                //Galeria y disposicion de secciones
+                display:flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                flex-direction: row;
+                row-gap: 5vh;
+                column-gap: 5vw;
+                    div{
+                        display: flex;
+                        flex-direction:column;
+                        align-items: center;
+                        margin-bottom:10vh;
+                        img{
+                            width:192px;
+                            height: 120px;
+                        }
+                    }
+                }
+            }
+            footer{
+                display: flex;
+                flex-direction:column;
+                align-items: center;
+                padding: 2vw;
+                
+        
+                ul{
+                    display: flex;
+                    flex-direction:column;
+                    align-items: center;
+                    margin-bottom: 3vh;
+                
+                }
+            }
+        }
+}
+
+
+
+
+@media (min-width:1201px){
+body{
+//HEADER DIVISION C GRID, SUBDIVISION FLEX
+    header{
+        display: grid;
+        align-items: center;
+        grid-template-areas: 
+        "logo search ofertas"
+        "compras usuario usuario";
+        padding: 1vw;
+
+        #logo{
+            width: 134px;
+            height: 34px;
+            grid-area:logo;
+            img{
+                width: 100%;
+                height:100%;
+            }
+        }
+        #barraBusqueda{
+            grid-area:search;
+        }
+        #ofertasTitulo{
+
+            grid-area:ofertas;
+        }
+        #navegadorCompras{
+            grid-area:compras;
+            .listaMarket{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                margin-top: 2vh;
+            }
+        }
+        #navegadorUsuario{
+            grid-area:usuario;
+            .navUsu{
+                display: flex;
+                flex-direction:row;
+                justify-content: space-around;
+                margin-top: 2vh;
+                justify-content: flex-end;
+                li{
+                    margin-right: 5vw;
+                }
+            }
+        }
+    }
+
+    main{
+        margin-bottom: 10vh;
+        #slider{
+            width: 100%;
+            margin-bottom: 10vh;
+        }
+        #galeria{
+        //Galeria y disposicion de secciones
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        margin-left: 5vw;
+            div{
+                
+                display: flex;
+                flex-direction:column;
+                align-items: center;
+                margin-bottom:5vh;
+                width: 384px;
+                img{
+                    width:384px;
+                    height: 240px;
+                }
+            }
+        }
+    }
+    footer{
+        display: flex;
+        flex-direction:column;
+        padding: 1vw;
+        
+
+        ul{
+            display: flex;
+            flex-direction:row;
+            justify-content: space-between;
+            
+        }
+    }
+}
+}
