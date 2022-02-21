@@ -364,13 +364,13 @@
   header {
     background-color: #fff159;
   }
-  header nav li {
+  header nav .listaMarket {
     font-size: 18px;
     color: #736c28;
     animation-name: secciones;
     animation-duration: 2s;
   }
-  header nav li:active {
+  header nav .listaMarket:active {
     color: #c1b74d;
   }
   @keyframes secciones {
@@ -383,18 +383,79 @@
       opacity: 100;
     }
   }
-  header nav li a {
+  header nav .listaMarket a {
     color: #736c28;
+  }
+  header nav #usuario, header nav #favoritos, header nav #compras {
+    font-size: 18px;
+    color: #736c28;
+    animation-name: secciones;
+    animation-duration: 2s;
+  }
+  header nav #usuario:hover, header nav #favoritos:hover, header nav #compras:hover {
+    transform: scale(1.2, 1.2);
+  }
+  header nav #usuario:active, header nav #favoritos:active, header nav #compras:active {
+    color: #c1b74d;
+  }
+  @keyframes secciones {
+    from {
+      transform: translateX(-100px);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0px);
+      opacity: 100;
+    }
+  }
+  header nav #usuario a, header nav #favoritos a, header nav #compras a {
+    color: #736c28;
+  }
+  header nav #compras:hover {
+    transform: scale(1.5, 1.5);
+  }
+  header nav #favoritos:hover {
+    transform: scale(1.7, 1.7);
   }
 
   main {
     background-color: #e7e7e7;
   }
   main #galeria {
-    animation-duration: 4s;
+    /*
+    animation-duration:4s;
     animation-name: galeria;
+    @keyframes galeria{
+        from{
+            transform: translateY(-50px);
+            opacity:0;
+        }
+        to{
+            transform: translateY(0px);
+            opacity:100;
+        }
+    }
+    div{
+        background-color:$color-cajas;
+        border-radius:2%;
+
+        img{
+        width: 100%;
+        height: 100%;
+        }
+        &:active{
+            transform:scale(1.05,1.05);
+        }
+    }
+    */
   }
-  @keyframes galeria {
+  main #galeria .an-hom {
+    animation-name: an-hom;
+    animation-duration: 100ms;
+    background-color: #fff;
+    border-radius: 2%;
+  }
+  @keyframes an-hom {
     from {
       transform: translateY(-50px);
       opacity: 0;
@@ -404,15 +465,333 @@
       opacity: 100;
     }
   }
-  main #galeria div {
-    background-color: #fff;
-    border-radius: 2%;
-  }
-  main #galeria div img {
+  main #galeria .an-hom img {
     width: 100%;
     height: 100%;
   }
-  main #galeria div:active {
+  main #galeria .an-hom:active {
+    transform: scale(1.05, 1.05);
+  }
+  main #galeria .an-muj {
+    animation-name: an-muj;
+    animation-duration: 200ms;
+    background-color: #fff;
+    border-radius: 2%;
+  }
+  @keyframes an-muj {
+    from {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0px);
+      opacity: 100;
+    }
+  }
+  main #galeria .an-muj img {
+    width: 100%;
+    height: 100%;
+  }
+  main #galeria .an-muj:active {
+    transform: scale(1.05, 1.05);
+  }
+  main #galeria .an-nin {
+    animation-name: an-nin;
+    animation-duration: 300ms;
+    background-color: #fff;
+    border-radius: 2%;
+  }
+  @keyframes an-nin {
+    from {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0px);
+      opacity: 100;
+    }
+  }
+  main #galeria .an-nin img {
+    width: 100%;
+    height: 100%;
+  }
+  main #galeria .an-nin:active {
+    transform: scale(1.05, 1.05);
+  }
+  main #galeria .an-run {
+    animation-name: an-run;
+    animation-duration: 400ms;
+    background-color: #fff;
+    border-radius: 2%;
+  }
+  @keyframes an-run {
+    from {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0px);
+      opacity: 100;
+    }
+  }
+  main #galeria .an-run img {
+    width: 100%;
+    height: 100%;
+  }
+  main #galeria .an-run:active {
+    transform: scale(1.05, 1.05);
+  }
+  main #galeria .an-sport {
+    animation-name: an-sport;
+    animation-duration: 600ms;
+    background-color: #fff;
+    border-radius: 2%;
+  }
+  @keyframes an-sport {
+    from {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0px);
+      opacity: 100;
+    }
+  }
+  main #galeria .an-sport img {
+    width: 100%;
+    height: 100%;
+  }
+  main #galeria .an-sport:active {
+    transform: scale(1.05, 1.05);
+  }
+  main #galeria .an-fut {
+    animation-name: an-fut;
+    animation-duration: 700ms;
+    background-color: #fff;
+    border-radius: 2%;
+  }
+  @keyframes an-fut {
+    from {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0px);
+      opacity: 100;
+    }
+  }
+  main #galeria .an-fut img {
+    width: 100%;
+    height: 100%;
+  }
+  main #galeria .an-fut:active {
+    transform: scale(1.05, 1.05);
+  }
+  main #galeria .an-tees {
+    animation-name: an-tees;
+    animation-duration: 800ms;
+    background-color: #fff;
+    border-radius: 2%;
+  }
+  @keyframes an-tees {
+    from {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0px);
+      opacity: 100;
+    }
+  }
+  main #galeria .an-tees img {
+    width: 100%;
+    height: 100%;
+  }
+  main #galeria .an-tees:active {
+    transform: scale(1.05, 1.05);
+  }
+  main #galeria .an-shorts {
+    animation-name: an-shorts;
+    animation-duration: 900ms;
+    background-color: #fff;
+    border-radius: 2%;
+  }
+  @keyframes an-shorts {
+    from {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0px);
+      opacity: 100;
+    }
+  }
+  main #galeria .an-shorts img {
+    width: 100%;
+    height: 100%;
+  }
+  main #galeria .an-shorts:active {
+    transform: scale(1.05, 1.05);
+  }
+  main #galeria .an-bras {
+    animation-name: an-bras;
+    animation-duration: 1s;
+    background-color: #fff;
+    border-radius: 2%;
+  }
+  @keyframes an-bras {
+    from {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0px);
+      opacity: 100;
+    }
+  }
+  main #galeria .an-bras img {
+    width: 100%;
+    height: 100%;
+  }
+  main #galeria .an-bras:active {
+    transform: scale(1.05, 1.05);
+  }
+  main #galeria .an-air {
+    animation-name: an-air;
+    animation-duration: 1.1s;
+    background-color: #fff;
+    border-radius: 2%;
+  }
+  @keyframes an-air {
+    from {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0px);
+      opacity: 100;
+    }
+  }
+  main #galeria .an-air img {
+    width: 100%;
+    height: 100%;
+  }
+  main #galeria .an-air:active {
+    transform: scale(1.05, 1.05);
+  }
+  main #galeria .an-airf {
+    animation-name: an-airf;
+    animation-duration: 1.2s;
+    background-color: #fff;
+    border-radius: 2%;
+  }
+  @keyframes an-airf {
+    from {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0px);
+      opacity: 100;
+    }
+  }
+  main #galeria .an-airf img {
+    width: 100%;
+    height: 100%;
+  }
+  main #galeria .an-airf:active {
+    transform: scale(1.05, 1.05);
+  }
+  main #galeria .an-peg {
+    animation-name: an-peg;
+    animation-duration: 1.3s;
+    background-color: #fff;
+    border-radius: 2%;
+  }
+  @keyframes an-peg {
+    from {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0px);
+      opacity: 100;
+    }
+  }
+  main #galeria .an-peg img {
+    width: 100%;
+    height: 100%;
+  }
+  main #galeria .an-peg:active {
+    transform: scale(1.05, 1.05);
+  }
+  main #galeria .an-rev {
+    animation-name: an-rev;
+    animation-duration: 1.4s;
+    background-color: #fff;
+    border-radius: 2%;
+  }
+  @keyframes an-rev {
+    from {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0px);
+      opacity: 100;
+    }
+  }
+  main #galeria .an-rev img {
+    width: 100%;
+    height: 100%;
+  }
+  main #galeria .an-rev:active {
+    transform: scale(1.05, 1.05);
+  }
+  main #galeria .an-bot {
+    animation-name: an-bot;
+    animation-duration: 1.5s;
+    background-color: #fff;
+    border-radius: 2%;
+  }
+  @keyframes an-bot {
+    from {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0px);
+      opacity: 100;
+    }
+  }
+  main #galeria .an-bot img {
+    width: 100%;
+    height: 100%;
+  }
+  main #galeria .an-bot:active {
+    transform: scale(1.05, 1.05);
+  }
+  main #galeria .an-acc {
+    animation-name: an-acc;
+    animation-duration: 1.6s;
+    background-color: #fff;
+    border-radius: 2%;
+  }
+  @keyframes an-acc {
+    from {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0px);
+      opacity: 100;
+    }
+  }
+  main #galeria .an-acc img {
+    width: 100%;
+    height: 100%;
+  }
+  main #galeria .an-acc:active {
     transform: scale(1.05, 1.05);
   }
 

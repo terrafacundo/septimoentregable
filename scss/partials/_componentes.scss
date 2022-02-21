@@ -127,7 +127,7 @@ main{
     header{
         background-color:$color-princ;
         nav{
-            li{
+            .listaMarket{
                 font-size: 18px;
                 color:$color-letras;
                 &:active{
@@ -148,12 +148,51 @@ main{
                 a{
                     color:$color-letras;
                 }
+//Acá esta aplicado el extend, utilizando diferentes reescalados en las secciones
+            }
+            #usuario{
+                font-size: 18px;
+                color:$color-letras;
+                &:hover{
+                    transform:scale(1.2,1.2);
+                }
+                &:active{
+                    color:$color-borde;
+                }
+                animation-name:secciones;
+                animation-duration: 2s;
+                    @keyframes secciones{
+                        from{
+                            transform: translateX(-100px);
+                            opacity:0;
+                        }
+                        to{
+                            transform: translateX(0px);
+                            opacity:100;
+                        }
+                    }
+                a{
+                    color:$color-letras;
+                }
+            }
+            #compras{
+                @extend #usuario;
+                &:hover{
+                    transform:scale(1.5,1.5);
+                }
+            }
+            #favoritos{
+                @extend #usuario;
+                &:hover{
+                    transform:scale(1.7,1.7);
+                }
             }
         }
     }
     main{
         background-color:$color-fondo;
         #galeria{
+            /*
             animation-duration:4s;
             animation-name: galeria;
             @keyframes galeria{
@@ -178,7 +217,54 @@ main{
                     transform:scale(1.05,1.05);
                 }
             }
-    
+            */
+//Utilizacion del map para hacer una animacion un poco más elegante
+            $galerias:(
+                an-hom:100ms,
+                an-muj:200ms,
+                an-nin:300ms,
+                an-run:400ms,
+                an-sport:600ms,
+                an-fut:700ms,
+                an-tees:800ms,
+                an-shorts:900ms,
+                an-bras:1s,
+                an-air:1.1s,
+                an-airf:1.2s,
+                an-peg:1.3s,
+                an-rev:1.4s,
+                an-bot:1.5s,
+                an-acc:1.6s,
+            );
+
+            @each $card, $tiempo in $galerias{
+                .#{$card} {
+                    
+                    animation-name:$card;
+                    animation-duration:$tiempo;
+                    @keyframes #{$card} {
+                        from{
+                            transform: translateY(-50px);
+                            opacity:0;
+                        }
+                        to{
+                            transform: translateY(0px);
+                            opacity:100;
+                        }
+                    }
+                
+                    background-color:$color-cajas;
+                    border-radius:2%;
+                    
+                    img{
+                    width: 100%;
+                    height: 100%;
+                    }
+                    &:active{
+                        transform:scale(1.05,1.05);
+                    }
+                }
+            }
         }
         
     }
